@@ -48,47 +48,27 @@ public class Final_project {
 		}
 		System.out.println("Thank you for using our Library management system! \nHave a good day!");
 		
-	}
-	
-	
-	
-	
-	
+	}	
 	
 	public static void books(int [] avails, String [] booknames) {
 		for (int i = 0; i < booknames.length; i++)
 		System.out.println(booknames[i] + " : " + avails[i]);
 	}
 	
-	
-	
-	
-	
-	
 	public static void borrowing(String in, int [] avails, String [] booknames) {
 		for (int a = 0; a < booknames.length; a++) {
-			if (in.length() == (booknames[a].length()))
-			{
-				if (in.equals(booknames[a])) {
-					System.out.println("You have borrowed one copy of " + in + "\n");
-					avails[a] -= 1;
-				}
+			if (in.equals(booknames[a])) {
+				System.out.println("You have borrowed one copy of " + in + "\n");
+				avails[a] -= 1;
 			}
 		}
 	}
 	
-	
-	
-	
-	
 	public static void returning(String in, int [] avails, String [] booknames) {
 		for (int a = 0; a < booknames.length; a++) {
-			if (in.length() == (booknames[a].length()))
-			{
-				if (in.equals(booknames[a])) {
-					System.out.println("You have returned one copy of " + in + "\n");
-					avails[a] += 1;
-				}
+			if (in.equals(booknames[a])) {
+				System.out.println("You have returned one copy of " + in + "\n");
+				avails[a] += 1;
 			}
 		}
 	}
